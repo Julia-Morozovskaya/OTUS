@@ -1,5 +1,5 @@
-import { kolobok } from "../tale";
-import { newYear } from "../tale";
+import { kolobok } from "../src/tale";
+import { newYear } from "../src/tale";
 
 describe("Колобок", () => {
     test("Лиса", () => {
