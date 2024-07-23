@@ -25,9 +25,9 @@ describe("Тесты на пробелы", () => {
         expect(fullText).toBe("OTUSotus");
     });
     test("string + number", () => {
-        const text = "assas " + 123;
+        const text = "otus" + 123;
         const fullText = fullTrim(text);
-        expect(fullText).toBe("assas123")
+        expect(fullText).toBe("otus123")
     })
     test("number + ''", () => {
         const text = 123 + "  ";
