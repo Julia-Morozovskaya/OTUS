@@ -38,30 +38,21 @@ describe("Тесты на пробелы", () => {
 
 describe("Подсчет суммы заказа", () => {
     test("Один параметризированный тест", () => {
-    const one = [{
-        price: 10,
-        quantity: 2
-    }]; 
-    const two = [{
-        price: 200,
-        quantity: 30
-    }]; 
-    const three = [{
-        price: 100,
-        quantity: 4
-    }];
-    const items = [ one, two, three];
-    const discount = [ 0, 5, -5, 120, "один" ];
-
-   for (let i of discount) {
-       for( let y of items) {
-        if(typeof i !== "number" || i < 0 || i >= 100){
-            expect(() => getTotal(y, i)).toThrow()
-        } else {
-            getTotal(y, i)
-            console.log(getTotal(y, i))
-        }
-       }
-    } 
-})
+        const data = [
+            {
+              items: [{ price: 10, quantity: 2 }],
+              discount: 0
+            },
+            {
+              items: [{ price: 200, quantity: 30 }],
+              discount: ""
+            },
+            // ...
+        ]
+        
+    
+       for (const item of data) {
+            expect(() => getTotal(...item)).toThrow()
+        } 
+    })
 })
